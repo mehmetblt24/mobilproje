@@ -5,7 +5,7 @@ import { StyleSheet, Text, View } from 'react-native';
 interface IProps{}
 interface IState{}
 
-export default class App extends React.Component<IProps, IState> {
+export default class Home extends React.Component<IProps, IState> {
 
   constructor(p: IProps, s: IState)
   {
@@ -15,7 +15,7 @@ export default class App extends React.Component<IProps, IState> {
 
   return (
     <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
+      <Text>Home</Text>
       <StatusBar style="auto" />
     </View>
   );

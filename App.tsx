@@ -1,6 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import AppContainer from './AppContainer';
 
 interface IProps{}
 interface IState{}
@@ -14,10 +15,7 @@ export default class App extends React.Component<IProps, IState> {
   render(){
 
   return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <AppContainer></AppContainer> 
   );
 }
   

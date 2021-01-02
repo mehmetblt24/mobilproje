@@ -16,6 +16,7 @@ export default class Home extends React.Component<IProps, IState> {
   return (
     <View style={styles.container}>
       <Text>Home</Text>
+    
       <StatusBar style="auto" />
     </View>
   );

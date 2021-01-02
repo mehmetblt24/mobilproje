@@ -1,8 +1,9 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import ICommon from '../common/interfaces/ICommon';
 
-interface IProps{}
+interface IProps extends ICommon{}
 interface IState{}
 
 export default class Home extends React.Component<IProps, IState> {
@@ -16,7 +17,7 @@ export default class Home extends React.Component<IProps, IState> {
   return (
     <View style={styles.container}>
       <Text>Home</Text>
-    
+      <Text>Burda {this.props.screenProps.locale}</Text>
       <StatusBar style="auto" />
     </View>
   );

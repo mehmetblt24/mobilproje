@@ -15,7 +15,7 @@ export default class App extends React.Component<IProps, IState> {
   {
     super(p,s)
     this.state={
-      locale:localization.locale
+      locale:"tr"
     }
   }
 

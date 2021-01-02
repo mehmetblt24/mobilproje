@@ -2,10 +2,16 @@ import i18n from 'i18n-js'
 
 
 const de={
-    Home:"Home"
+    Home:"Home",
+    Accept:"Bestatigen",
+    PassPlaceHolder:"Geben Sie Ihree Passwort",
+    PassErr:"error password"
 };
 const tr={
-    Home:"Ev"
+    Home:"Ev",
+    Accept:"Tamam",
+    PassPlaceHolder:"Sifrenizi Giriniz",
+    PassErr:"Hatali Sifre"
 };
 const en=de;
 

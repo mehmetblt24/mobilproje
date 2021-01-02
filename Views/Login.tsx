@@ -6,6 +6,7 @@ import {Input } from 'react-native-elements';
 interface IProps extends ICommon{}
 interface IState{
   errorMessage:string
+  psw:string
 }
 
 export default class Login extends React.Component<IProps, IState> {
@@ -14,7 +15,8 @@ export default class Login extends React.Component<IProps, IState> {
   {
     super(p,s)
     this.state={
-      errorMessage:"asdas"
+      errorMessage:"",
+      psw:""
     }
   }
   render(){
@@ -26,21 +28,33 @@ export default class Login extends React.Component<IProps, IState> {
       </View>
       <View style={{flex: 1, padding:20}}>
         <Input 
+        onChangeText={(e)=>this.setState({psw:e})}
+        value={this.state.psw}
         secureTextEntry={true}
         placeholder={this.props.screenProps.t("PassPlaceHolder")}
         errorStyle={{color:'red'}}
-        errorMessage='Şifrenizi giriniz'></Input> 
+        errorMessage={this.state.errorMessage}></Input> 
 
         
-        <Button title={this.props.screenProps.t("Accept")} onPress={()=>{this.props.navigation.navigate("Home")}}></Button>
+        <Button title={this.props.screenProps.t("Accept")} onPress={this.login}></Button>
       </View>
       <View style={{flex: 1}}></View>
    
     </View>
   );
 }
-  
+login =  () =>{
+
+  if(this.state.psw==="123")
+  {
+    this.props.navigation.navigate("Home")
+  }
+  else{
+    this.setState({errorMessage:this.props.screenProps.t("PassErr")})
+  }
 }
+}
+
 
 const styles = StyleSheet.create({
   container: {

@@ -47,9 +47,9 @@ export default class Card extends React.Component<IProps, IState> {
 
 const styles=StyleSheet.create({
     container:{
-        marginTop:20,
-        width:(width-60)/2,
-        height:(width-60)/2,
+        marginTop:10,
+        width:(width-30)/2,
+        height:(width-30)/2,
         borderRadius:10,
         alignItems:"center",
         justifyContent:"center"

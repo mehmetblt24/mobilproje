@@ -2,11 +2,12 @@ import React, { Component } from 'react';
 import { createStackNavigator } from 'react-navigation-stack';
 import { createAppContainer } from 'react-navigation';
 import { TransitionPresets } from '@react-navigation/stack';
-import { Login, Home } from './Views';
+import { Login, Home, Menu } from './Views';
+import  {createDrawerNavigator} from 'react-navigation-drawer'
 
 
 
-var navi = createStackNavigator ({
+var viewsNavi = createStackNavigator ({
     Login:{
         screen:Login,
         navigationOptions:{
@@ -40,4 +41,9 @@ var navi = createStackNavigator ({
 
 });
 
+const navi=createDrawerNavigator(
+    {viewsNavi},
+    {
+    contentComponent:Menu
+});
 export default createAppContainer(navi);
